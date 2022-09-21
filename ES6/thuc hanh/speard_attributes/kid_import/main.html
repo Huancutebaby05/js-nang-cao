@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script type="module">
+    import kids from "./kid_list.js";
+    const mau_giao = []
+
+    //cách 1 ta sử dụng forEach
+    kids.forEach(kid => {
+        if (kid.age < 6) {
+            mau_giao.push({
+                id: kid.id,
+                name: kid.name,
+                age: kid.age
+            });
+        }
+    });
+    console.log(mau_giao);
+
+    // cách 2 ta sử dụng filter va map để lọc dữ liệu
+    const kids2 = kids.filter(kid => kid.age < 6).map(kid => ({
+        id: kid.id,
+        name: kid.name,
+        age: kid.age
+    }))
+    console.log(kids2);
+</script>
+
+</html>

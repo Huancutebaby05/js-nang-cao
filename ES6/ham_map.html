@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // maps chứa 1 cặp key-value với key có thể là bất kì loại dữ liệu nào, nó ghi nhớ trình tự thêm của key-value
+    const fruits = new Map([
+        ["apple", "100$"],
+        ["banana", "120$"],
+        ["mango", "80$"],
+        ["grapes", "94$"]
+        ]);
+
+    const fruitss = new Map([
+        ["hihi", "20s"],
+        ["lihià","nothinga"]
+    ])
+        console.log(fruits);
+
+for(let price of  fruits.keys()){
+    console.log(fruits.get(price)); 
+}
+         // set giá trị chp một phần tử có trong maps
+        fruits.set("apple","free");  
+
+        // Truy xuất giá trị của key tương ứng
+        console.log(fruits.get("apple"));  
+        console.log(fruits);
+
+        // xóa toàn bộ phần tử có trong maps
+       // fruits.clear(); 
+        // console.log(fruits);
+
+        // Xóa một phần tử trong maps
+        console.log(fruits.delete("mango"));;
+        console.log(fruits);
+
+        // has check xem key có tồn tại hay ko
+        console.log(fruits.has("grapes"));
+        
+        console.log(fruits.entries()); // trả về giá trị key-value theo cặp
+        console.log(fruits.keys()); // trả vè các keys  
+        console.log(fruits.values()); // trả về các values
+
+        console.log(fruits.size);
+
+        // để gộp 2 maps lại ta sử dụng pp 
+        let hihi = new Map([...fruits,...fruitss])
+        console.log(hihi);
+</script>   
+</html>

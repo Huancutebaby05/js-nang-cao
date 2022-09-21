@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    string1 = "lazy dog jumps over brown fox"
+    string2 = "a con chó này"
+
+    // cách 1 sử dụng hàm split để tách 1 string thành chuỗi
+    array =string1.split("")
+    console.log(array);
+    count = 0
+    for(arr of array){
+        count++
+    }
+    console.log(count);
+
+    // cách 2, biến 1 chuỗi thành một mảng bằng lệnh sử dụng 3 dấu chấm
+    
+    let array3 =[...string1,...string2]
+    console.log(array3.length);
+   
+    let copy_array3 = array3;
+    console.log(copy_array3);
+</script>
+</html>

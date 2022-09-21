@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<canvas></canvas>
+</body>
+<script>
+    let canvas = document.querySelector('canvas');
+    let cxt= canvas.getContext('2d');
+    canvas.width =500;
+    canvas.height =400;
+
+    class Rectangle {
+        constructor(long, width) {
+            this.width = width;
+            this.long = long;
+        }
+        get rong(){return this.width}
+        get dai(){return this.long}
+        getPerimetter() {
+            return (this.long + this.width)*2
+        }
+        getArea(){
+            return this.long * this.width
+        }
+        
+        canvas(x,y){
+            this.x = x; this.y = y;
+                cxt.fillStyle = "orange"
+                cxt.beginPath();
+                cxt.strokeRect(this.x, this.y,this.width,this.long)
+        
+        }
+    }
+
+let rectangle = new Rectangle(80,50)
+console.log(rectangle.getPerimetter());
+console.log(rectangle.getArea());
+console.log(rectangle.dai);
+console.log(rectangle.rong);
+rectangle.canvas(50,50)
+</script>
+
+</html>

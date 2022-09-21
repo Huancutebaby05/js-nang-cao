@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    class Infor {
+        constructor(name, discib) {
+            this.name = name;
+            this.discib = discib;
+        }
+        static triple(constNumber=1) {
+            return constNumber * 3
+        }
+    }
+    class Hinhhoc extends Infor {
+        constructor(length, name, discib) {
+            super(name, discib)
+            this.length = length;   
+        }
+        triple(num=2){
+            return num
+        }
+    }
+    let hh = new Hinhhoc("42","dont know")
+    console.log(Hinhhoc.triple(3));
+    console.log(hh.triple(4));
+</script>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zip code</title>
+</head>
+<body>
+    
+</body>
+<script>
+    regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+    var is_zipcode = function(code){
+        if(!regexp.test(code)){
+            return true;
+        }
+        return false;
+    }
+    console.log(is_zipcode(96455)
+);
+</script>
+</html>

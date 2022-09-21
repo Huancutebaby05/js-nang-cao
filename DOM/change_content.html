@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript parentNode</title>
+</head>
+<style>
+    #demo{
+        color: rgb(21, 143, 143);
+        background: rgb(226, 201, 171);
+    }
+</style>
+
+<body>
+    <div class="hihi">
+        <button onclick="functions()">Click here</button>
+        <div id="main">
+        </div>
+    </div>
+    <div id="demo">
+        <p onmousedown="mouseDown()" onmouseup="mouseUp()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tenetur porro possimus, nostrum magnam, atque, fugit sit totam corporis provident debitis rerum! Excepturi sed neque aperiam sint, rem deleniti est.</p>
+    </div>
+
+    <script>
+        let value = document.getElementById("demo")
+        function functions(){
+            // let content = document.querySelector('#main');
+            // let firstChild = document.createElement("p");
+            // firstChild.textContent = "ahihi";
+            // content.appendChild(firstChild);
+            value.style.color = "blue";
+            value.style.fontSize = "20px";
+        }
+        function mouseDown() {
+            value.style.color = "#000";
+        }
+        function mouseUp() {
+            value.style.color = "#fff";
+        }
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Hàm tạo chuỗi mật khẩu
+    function createPassword(callback) {
+        return callback('codegymvn');
+    }
+
+    // Sử dụng
+    var password = createPassword(function (secret_key) {
+        return secret_key;
+    });
+
+    alert(password);
+    console.log(typeof password);
+
+
+    function fullName() {
+        console.log("Truong");
+    }
+    function grade() {
+        console.log("Class A2");
+    }
+    function age() {
+        console.log("i;m 25");
+    }
+    ajax =({
+        fullName: fullName(),
+        grade: grade(),
+        age: age(),
+    })
+    
+
+    function getData(link, callback) {
+   setTimeout(() => {
+      callback();
+   }, 1000)
+}
+
+getData("Data1", () => {
+   getData("Data2", () => {
+      getData("Data2", () => {
+         getData("Data3", () => {
+            getData("Data4", () => {
+               getData("Data5", () => {
+                  getData("Data6", () => {
+                     console.log("Done");                     
+                  })
+               })
+            })
+         })
+      })
+   })
+})
+</script>
+
+</html>
