@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+     async function getData() {
+        try {
+            const res = await axios.get("https://6336e4535327df4c43cba470.mockapi.io/api/truong_demo/tapcode")
+            console.log(res.data);
+        } catch (err) {
+            console.log("error", err);
+        }
+    }
+    // getData()
+</script>
+</html>

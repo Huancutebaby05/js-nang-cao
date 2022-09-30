@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Callback Function</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+function bai1(){
+    let greet=(name, callback)=>{
+        console.log("Hi " + name);
+        callback(name);
+    }
+    let callMe = ()=>{
+        console.log("Tôi là người ngu xi");
+    }
+    greet("trường", callMe);
+}
+bai1()
+
+    function bai3() {
+        let greet = (name, myFunction) => {
+            console.log("Hello world");
+            myFunction(name)
+        }
+        let sayName =(name)=>{
+            console.log("Hello " + name)
+        }
+        // greet sẽ chạy sau 2s còn giá trị trường là name, sayName là hàm callback
+        setTimeout(greet, 2000, "truong", sayName)
+    }
+    // bai3()
+</script>
+
+</html>

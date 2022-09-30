@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script>
+    async function getData() {
+        try {
+            const res = await axios.get("https://6336e4535327df4c43cba470.mockapi.io/api/truong_demo/tapcode")
+            console.log(res.data);
+        } catch (err) {
+            console.log("error", err);
+        }
+    }
+    // getData()
+
+    //get detail
+    async function getDataDetail(id) {
+        try {
+            const res = await axios.get(`https://6336e4535327df4c43cba470.mockapi.io/api/truong_demo/tapcode/${id}`)
+            console.log(res.data);
+        } catch (err) {
+            console.log("error", err);
+        }
+    }
+    // getDataDetail("2")
+
+    //post
+    let data ={
+        name: "truong1234",
+        age:18
+    }
+    async function postData(newData) {
+        try {
+            const res = await axios.post("https://6336e4535327df4c43cba470.mockapi.io/api/truong_demo/tapcode/", newData)
+            console.log(res.data);
+        } catch (err) {
+            console.log("error", err);
+        }
+    }
+    postData(data)
+
+
+    async function putData(id,newData) {
+        try {
+            const res = await axios.put(`https://6336e4535327df4c43cba470.mockapi.io/api/truong_demo/tapcode/${id}`, newData)
+            console.log(res.data);
+        } catch (err) {
+            console.log("error", err);
+        }
+    }
+    
+    // putData("7", data)
+
+
+    //delete
+    async function deleteData(id) {
+        try {
+            const res = await axios.delete(`https://6336e4535327df4c43cba470.mockapi.io/api/truong_demo/tapcode/${id}`)
+            console.log(res.data);
+        } catch (err) {
+            console.log("error", err);
+        }
+    }
+    // deleteData("1")
+</script>
+
+</html>

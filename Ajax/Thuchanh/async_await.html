@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<p>trong ví dụ ta có thể thấy hamg được log trực tiếp sẽ xuấ hiện trước rồi mới đến hàm chưa resolve </p>
+</body>
+<script>
+    // bai 1
+    async function bai1() {   // async đặt trước hàm biểu thị hàm không đồng bộ
+        console.log('Async function 1.');
+        return Promise.resolve(1);
+    }
+    bai1().then(function (result) {
+        console.log(result);
+    })
+
+    //bai 2
+     async function bai2() { 
+        console.log("Async function 2.");
+        return Promise.resolve("khi add promise.resolve vào thì sẽ biến hàm chứa nó thành không đồng bộ, và resolve là giá trị trả ra khi đúng")
+     }
+     bai2().then(function(result) {
+        console.log(result);
+     })
+
+     //bai3
+     let promise = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            resolve("Giá trị trả về kết quả đúng")
+        },3000)
+        // reject("Giá trị trả về kết quả sai")
+     })
+     async function asyncFunction(){
+        let result = await promise
+        console.log(result);
+        console.log("hello world");
+     } 
+asyncFunction()
+</script>
+
+</html>

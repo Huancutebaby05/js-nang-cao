@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+// chưa làm được
+
+    //    function delNumber(){
+    //     const numbers = [1, 4, 2, 5, 7, 5, 4, 3, 2, 3, 8];
+    //     const number = []
+    //     for (var i = 0; i < numbers.length; i++) {
+    //        for (var j = 1; j < numbers.length; j++) {
+    //         if(numbers[j]!==numbers[i]){
+    //             number.push(numbers[j]);
+    //         }
+    //        }
+    //     }
+    //     return number;
+    //    }
+    //    delNumber()
+    //    console.log(delNumber());
+    
+    const numbers = [1, 4, 2, 5, 7, 5, 4, 3, 2, 3, 8];
+    let result = []
+    numbers.forEach(number => {
+        if (!result.includes(number)) {
+            result.push(number);
+        }
+    })
+    console.log(result);
+</script>
+
+</html>

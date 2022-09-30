@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng for of</title>
+</head>
+<body>
+    
+    <script>
+        const team = [
+        {member: 'John',km: 3},
+        {member: 'Jane',km: 4},
+        {member: 'David',km: 5},
+        {member: 'Peter',km: 2},
+    ];
+    let sum = 0;
+    for (mem of team) {
+        // if (mem.member =="Peter"){
+        //     console.log(mem.km);
+        //     break;
+        // }
+        console.log(mem.member);
+       sum += mem.km;
+    }
+    console.log(`Số km đã chạy của nhóm là ${sum}`);
+   const tong = team.reduce((result, curr)=>result + curr.km,0)
+   console.log("so km da chay la "+tong);
+
+   let tong2=0
+    let teamMap= team.map(name=>{
+        tong2 += name.km
+    })
+    console.log(tong2);
+    </script>
+</body>
+</html>

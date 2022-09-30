@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let countValue = new Promise( (hihi, haha)=> {
+        // hihi("promise resolved")
+        haha(new Error("Promise rejected"))
+    })
+    countValue.then(
+         (result)=> {
+            console.log(result);
+        }).catch( (result)=> {
+            console.log(result);
+        })
+</script>
+
+</html>

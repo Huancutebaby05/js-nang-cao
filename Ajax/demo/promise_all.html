@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const p1 = new Promise((resolve, reject) => {
+        setTimeout(() => resolve('one'), 1000);
+    });
+    const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => resolve('two'), 2000);
+    });
+    const p3 = Promise.resolve("three");
+    const p4 = new Promise((resolve, reject) => {
+        setTimeout(() => resolve('four'), 4000);
+    })
+    // const p3 = Promise.reject("three");
+    // const p4 = new Promise((resolve, reject) => {
+    //         // reject(console.error("code error"))
+    //         reject("Code error")
+       
+    // })
+    
+
+    // Using .catch:
+    Promise.all([p1, p2, p3, p4])  // Promise.all chạy song song các promise nhỏ bên trong nó
+        .then((values) => {
+            console.log(values);
+        })
+        .catch(() => {
+            console.log(new Error("Failed to get values"))
+        }).finally(() => {   // hIỂN THỊ SAU KHI CHẠY XONG promise
+            console.log("done");
+        })
+
+// From console:
+// "reject"
+</script>
+
+</html>

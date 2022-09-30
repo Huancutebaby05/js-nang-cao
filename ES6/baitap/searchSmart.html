@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const names = [
+        "ngUyen van B ",
+        "  Nguyen  van A",
+        "Van",
+        "vu hoai lam",
+        "  Vu hoai lan",
+        " nguyen Van An"
+    ];
+
+    const searchName = (name, arr) => {
+        let name2 = name.trim().toLowerCase();  //trim để xóa khoảng trống hai phía của string sau đóbiến tất cả các string trong array về dạng toLowerCase
+        console.log(name2);
+        const result = arr.filter((item) =>
+            item.trim().toLowerCase().includes(name2)  //filter để lọc các giá trị
+        );
+        return result
+    }
+    console.log(searchName("Nguyen", names));
+</script>
+
+</html>

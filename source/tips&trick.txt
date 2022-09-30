@@ -1,0 +1,21 @@
+ctrl + shift+p để gọi extention ra
+    emmet wrap ... để nhóm các element
+    copy css class để copy các class từ html ra css
+alt + shift +f để chỉnh ;lại hệ thống code
+shift + alt + chuột trái để chọn theo hàng dọc
+ctrl + shift + K để xóa dòng con trỏ chuột đang chỉ
+ctrl + L để chọn dòng con trỏ chuột đang đặt
+ctrl + shift + L để tìm kiếm tất cả các vị trí co từ giống nó để chỉnh sửa;
+Alt + mũi tên lên xuống để di chuyển dòng hiện tại lên xuống, có thể chọn nhiều dòng.
+Alt + Shift + mũi tên lên xuống để copy dòng hiện tại lên xuống, có thể chọn nhiều dòng.
+Ctrl + G giúp bạn điều hướng đến dòng mong muốn trong tập tin.
+Ctrl + F này giúp bạn tìm bất kỳ từ nào trong tệp hiện tại.
+ F3 / Shift + F3 này giúp di chuyển tiếp / trước của từ được tìm kiếm
+Ctrl + ` Ẩn / Hiện Terminal trong Visual Studio Code
+Ctrl + Shift + M này giúp bạn hiển thị / ẩn bảng Problems trong Visual Studio Code.
+
+\xB0 là chữ độ nhỏ trong độ C, độ F.
+&#8451; là độ C
+&#8457; là độ F
+&nbsp; dấu space 1 cách;
+&ensp; dấu space 2 cách;

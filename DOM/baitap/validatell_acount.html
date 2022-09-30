@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" required pattern="[_a-z0-9]{6,}"  placeholder="Text your account">
+        <input type="submit" value="Regist">
+    </form>
+</body>
+<script>
+    const regex = /[_a-z0-9]{6,}/
+let test = (str) => {
+    if(!regex.test(str)) {
+        console.log("Tài khoản không hợp lệ")
+    }
+    else{
+        console.log("Đã xác nhận tài khoản hợp lệ");
+    }
+}
+test("anh")
+test("anh_EM_NHA")
+test("anhnhoem")
+test("464664575")
+
+</script>
+</html>

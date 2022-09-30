@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // a promise
+    let promise = new Promise(function (resolve, reject) {
+        // reject("There is no count value")
+        setTimeout(function () {
+            resolve('Promise resolved')
+        }, 4000);
+    });
+
+    // async function
+    async function asyncFunc() {
+        let result = await promise;
+
+        console.log(result);
+        console.log('hello');
+    }
+    asyncFunc();
+</script>
+
+</html>

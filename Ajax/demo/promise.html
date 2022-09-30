@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const count = true;
+
+    // let countValue = new Promise(function (resolve, reject) {
+    //     if (count) {
+    //         resolve("There is a count value.");
+    //     } else {
+    //         reject("There is no count value");
+    //     }
+    // });
+
+    // then trả về giá trị của promise khi hàm thỏa mãn điều kiện
+    // countValue.then(value =>
+    //     console.log(value)
+    // )
+    // //catch trả về khi hàm promise bị lỗi
+    // countValue.catch(err =>
+    //     console.log(err))
+    // console.log(countValue);
+
+
+
+    let countValue = new Promise(function (resolve, reject) {
+        if (count) {
+            resolve("There is a count value");
+        } else {
+            reject("There is no count value");
+        }
+    }).then((result)=> {
+        console.log(result);
+        return result + " then 1"
+    }).then((result)=> {
+        console.log(result);
+        return result + " then 2"
+    }).then((result)=> {
+        console.log(result);
+        return (result + " then 3")
+    }).catch(error=>{
+        console.log(error)
+        })
+</script>
+
+</html>
