@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather forecast</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .wraper {
+        height: 100vh;
+        width: 100vw;
+        background-color: #F7E0DA;
+    }
+
+    .search {
+        padding-top: 30px;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    input {
+        font-size: 18px;
+        padding: 8px 16px;
+
+    }
+
+
+
+    #information {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    table {
+        background-color: blueviolet;
+        min-width: 500px;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+</style>
+
+<body>
+    <div class="wraper">
+        <div class="search">
+            <h2>WEATHER FORECAST</h2>
+            <input type="text" id="search" placeholder="Enter a city">
+            <input type="submit" onclick="searchFunction()" value="Search">
+        </div>
+        <div id="information">
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script>
+    let APIKey = "07933dd3753a279562640655728b1e75"
+    let weather;
+    async function searchFunction() {
+        let city = document.getElementById("search").value.trim()
+        try {
+            weather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
+            console.log(weather.data);
+            display()
+        } catch (err) {
+            console.log("error", err);
+        }
+    }
+
+    function display() {
+        let cityName = weather.data.name
+        let feels_like = weather.data.main.feels_like
+        let temp = weather.data.main.temp
+        let wind = weather.data.wind.speed
+        let weather_desc = weather.data.weather[0].main
+        let data = "<table><tr>"
+        data += "<th>City name</th><th>" + cityName + "</th></tr> "
+        data += "<tr><td>Temp</td><td>" + temp + "</td></tr> "
+        data += " <tr><td>feels_like</td><td>" + feels_like + "</td></tr> "
+        data += "<tr><td>wind</td><td>" + wind + "</td> </tr> "
+        data += "<tr><td>weather_desc</td><td>" + weather_desc + "</td></tr></table> "
+        document.getElementById("information").innerHTML = data
+    }
+</script>
+
+</html>

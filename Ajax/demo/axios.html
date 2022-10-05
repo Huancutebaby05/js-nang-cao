@@ -27,17 +27,17 @@
     async function getDataDetail(id) {
         try {
             const res = await axios.get(`https://6336e4535327df4c43cba470.mockapi.io/api/truong_demo/tapcode/${id}`)
-            console.log(res.data);
+            console.log(res.data.avatar);
         } catch (err) {
             console.log("error", err);
         }
     }
-    // getDataDetail("2")
+    getDataDetail("2")
 
     //post
-    let data ={
+    let data = {
         name: "truong1234",
-        age:18
+        age: 18
     }
     async function postData(newData) {
         try {
@@ -47,10 +47,10 @@
             console.log("error", err);
         }
     }
-    postData(data)
+    // postData(data)
 
 
-    async function putData(id,newData) {
+    async function putData(id, newData) {
         try {
             const res = await axios.put(`https://6336e4535327df4c43cba470.mockapi.io/api/truong_demo/tapcode/${id}`, newData)
             console.log(res.data);
@@ -58,7 +58,7 @@
             console.log("error", err);
         }
     }
-    
+
     // putData("7", data)
 
 

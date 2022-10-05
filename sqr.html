@@ -3,49 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vanilla Axios</title>
+    <style>
+        body {
+            background-color: #673AB7;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: .5em;
+            margin-top: .5em;
+            padding: 1em;
+            border: 1px solid white;
+            transition-property: background-color, color;
+            transition-duration: 500ms;
+            transition-timing-function: ease-in-out;
+        }
+
+        li:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
-<canvas></canvas>
+    <div>
+        <h1>Todos</h1>
+        <ul>
+
+        </ul>
+    </div>
+    <div class="search">
+        <h2>GIPHY PARTY</h2>
+        <input type="text" id="search" placeholder="Enter a search term">
+        <input type="submit" onclick="searchFunction()" value="Search">
+        <input type="button" id="delete" onclick="deleteFunction()" value="Remove images">
+    </div>
+    <div id="image">
+    </div>
 </body>
-<script>
-    let canvas = document.querySelector('canvas');
-    let cxt= canvas.getContext('2d');
-    canvas.width =500;
-    canvas.height =400;
-
-    class Rectangle {
-        constructor(long, width) {
-            this.width = width;
-            this.long = long;
-        }
-        get rong(){return this.width}
-        get dai(){return this.long}
-        getPerimetter() {
-            return (this.long + this.width)*2
-        }
-        getArea(){
-            return this.long * this.width
-        }
-        
-        canvas(x,y){
-            this.x = x; this.y = y;
-                cxt.fillStyle = "orange"
-                cxt.beginPath();
-                cxt.strokeRect(this.x, this.y,this.width,this.long)
-        
-        }
-    }
-
-let rectangle = new Rectangle(80,50)
-console.log(rectangle.getPerimetter());
-console.log(rectangle.getArea());
-console.log(rectangle.dai);
-console.log(rectangle.rong);
-rectangle.canvas(50,50)
-</script>
+<script src="app.js"></script>
 
 </html>
